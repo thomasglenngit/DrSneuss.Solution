@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Factory.Models
 {
-  public class Doctor
+  public class Engineer
   {
-    public Doctor()
+    public Engineer()
     {
       this.Machines = new HashSet<EngineerMachine>();
       
