@@ -9,18 +9,17 @@ A code review program for Epicodus school, which tracks the Engineers for Dr. Sn
 
 <img src="Factory/wwwroot/assets/images/siteplan.png"          style="float: left; margin-right: 10px;" />
 
-<img src="Factory/wwwroot/assets/images/engineering.png" style="float: left; margin-right: 10px;">
 
 
 ## Specifications
 | Spec | Input | Output | 
-|:--------- |:--------- |:-------- |:---------|
+|:--------- |:--------- |:-------- |
 | The program will construct a database of Engineers allowing Dr. Sneuss to make entries | "First Name", "Last Name "ID" | "Tony Stark" "1"| 
 | The program will construct a database of Machines allowing Dr. Sneuss to make entries | "Name"  "Function" "Contruction Date" | "Robbie2369*" "Protocol Droid" "08.07.2020"|
-| The program will allow Dr. Sneuss to view lists of Engineers | "Tony Stark" -- "Caractacus Potts" |
-| The program will allow Dr. Sneuss to view lists of Machines | "Tony Stark" -- "Caractacus Potts" |
-| The program will allow Dr. Sneuss to view lists of Machines with the Engineers licensed to repair it| "Tony Stark" -- "Caractacus Potts" |
-| The program will allow Dr. Sneuss to view lists of Engineers with the Machines they are licensed to repair| "Tony Stark" -- "Caractacus Potts" |
+| The program will allow Dr. Sneuss to view lists of Engineers | "View Engineers List" | "Tony Stark" -- "Caractacus Potts"|
+| The program will allow Dr. Sneuss to view lists of Machines |  "View List of Machines" | "Iron Man -- Chitty Chitty Bang Bang" |
+| The program will allow Dr. Sneuss to view lists of Machines with the Engineers licensed to repair them | "View Machines under this Engineer" | "Tony Stark -- Iron Man" |
+| The program will allow Dr. Sneuss to view lists of Engineers with the Machines they are licensed to repair| "Iron Man -- Tony Stark" |
 | The program will allow Dr. Sneuss to edit entries | "Tony Stank" | "Tony Stark"
 | The program will allow Dr. Sneuss to delete entries | "Tony Stark Smythe" | " " | 
 
