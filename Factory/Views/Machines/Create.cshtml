@@ -21,19 +21,11 @@
     @Html.LabelFor(model => model.ConstructionDate)
     @Html.TextBoxFor(model => model.ConstructionDate, new { @class = "form-control", @type="date", @required = true})
   </div>
-  <h3>Would you like to assign an engineer to maintain this machine?</h3>
-    <select class="form-control" id="choice">
-        <option>Yes</option>
-        <option>No</option>
-    </select>
-      @if ( == "yes")
-      {
   <div class="form-group">
     @Html.Label("Select Engineer")
     @Html.DropDownList("EngineerId", null,  new { @class="form-control"})
   </div>
   <input type="submit" value="Add New Machine" class="btn btn-success" />
-      }
 }
 <hr />
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
