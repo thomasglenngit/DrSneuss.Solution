@@ -9,6 +9,7 @@ A code review program for Epicodus school, which tracks the Engineers for Dr. Sn
 
 <img src="Factory/wwwroot/assets/images/siteplan.png"          style="float: left; margin-right: 10px;" />
 
+<img src="Factory/wwwroot/assets/images/engineering.png" style="float: left; margin-right: 10px;">
 
 
 ## Specifications
