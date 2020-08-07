@@ -30,6 +30,13 @@ namespace Factory.Controllers
     [HttpPost]
     public ActionResult Create(Engineer engineer)
     {
+      foreach(Engineer eng in _db.Engineers)
+        {
+          if(eng.FirstName == engineer.FirstName && eng.LastName == engineer.LastName)
+          {
+            return RedirectToAction("Index");
+          }
+        }
       _db.Engineers.Add(engineer);
       _db.SaveChanges();
       return RedirectToAction("Index");
