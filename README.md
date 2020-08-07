@@ -32,7 +32,7 @@ A code review program for Epicodus school, which tracks the Engineers for Dr. Sn
 Visit the GitHub Pages by clicking on the following link or by typing it in your web browser. 
 <url:>
 
-https://github.com/thomasglenngit/HairSalon.Solution
+https://github.com/thomasglenngit/Factory.Solution
 
 #### View locally
 
@@ -78,6 +78,31 @@ Reopen the Navigator > Schemas tab. Right click and select Refresh All. Our new 
 #### Query
 The following is the query information for access this database on MySQL Workbench.
 ```
+  PRIMARY KEY (`MigrationId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `EngineerMachine` (
+  `EngineerMachineId` int(11) NOT NULL AUTO_INCREMENT,
+  `MachineId` int(11) NOT NULL,
+  `EngineerId` int(11) NOT NULL,
+  PRIMARY KEY (`EngineerMachineId`),
+  KEY `IX_EngineerMachine_EngineerId` (`EngineerId`),
+  KEY `IX_EngineerMachine_MachineId` (`MachineId`),
+  CONSTRAINT `FK_EngineerMachine_Engineers_EngineerId` FOREIGN KEY (`EngineerId`) REFERENCES `engineers` (`EngineerId`) ON DELETE CASCADE,
+  CONSTRAINT `FK_EngineerMachine_Machines_MachineId` FOREIGN KEY (`MachineId`) REFERENCES `machines` (`MachineId`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `Engineers` (
+  `EngineerId` int(11) NOT NULL AUTO_INCREMENT,
+  `FirstName` longtext,
+  `LastName` longtext,
+  PRIMARY KEY (`EngineerId`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `Machines` (
+  `MachineId` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` longtext,
+  `Function` longtext,
+  `ConstructionDate` datetime(6) NOT NULL,
+  PRIMARY KEY (`MachineId`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 ```
 
