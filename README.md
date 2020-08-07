@@ -4,10 +4,11 @@
 
 #### By **Thomas Glenn**
 
-<img src="Factory/wwwroot/assets/images/siteplan.png"          style="float: left; margin-right: 10px;" />
-
 ## Description
 A code review program for Epicodus school, which tracks the Engineers for Dr. Sneuss, the owner of his Factory. 
+
+<img src="Factory/wwwroot/assets/images/siteplan.png"          style="float: left; margin-right: 10px;" />
+
 
 
 ## Specifications
@@ -76,23 +77,7 @@ Reopen the Navigator > Schemas tab. Right click and select Refresh All. Our new 
 #### Query
 The following is the query information for access this database on MySQL Workbench.
 ```
-DROP DATABASE IF EXISTS `thomas_glenn`;
-CREATE DATABASE `thomas_glenn`;
-USE `thomas_glenn`;
-CREATE DATABASE `thomas_glenn` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */;
-CREATE TABLE `clients` (
-  `clientId` int(11) NOT NULL AUTO_INCREMENT,
-  `stylistId` int(11) NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `mobile` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`clientId`,`stylistId`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE `stylists` (
-  `stylistId` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`stylistId`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 ```
 
 
@@ -105,6 +90,10 @@ CREATE TABLE `stylists` (
 * GitHub
 * MSTests
 * MacOS Catalina
+* MySQL Workbench
+* CSS
+* .html
+
 
 ## License
 This software is licensed under the MIT license. Copyright (c) 2020 Thomas Glenn.

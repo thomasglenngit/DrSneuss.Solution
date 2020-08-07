@@ -7,11 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Factory.Controllers
 {
-  public class FactoryController : Controller
+  public class EngineersController : Controller
   {
     private readonly FactoryContext _db;
 
-    public FactoryController(FactoryContext db)
+    public EngineersController(FactoryContext db)
     {
       _db = db;
     }
@@ -40,7 +40,6 @@ namespace Factory.Controllers
       var thisEngineer = _db.Engineers
         .Include(engineer => engineer.Machines)                 //EngineerMachine join
         .ThenInclude(join => join.Machine)                  //Machine data
-
         .FirstOrDefault(Engineer => Engineer.EngineerId == id);
       return View(thisEngineer);
     }
