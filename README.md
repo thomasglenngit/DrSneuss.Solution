@@ -4,7 +4,7 @@
 
 #### By **Thomas Glenn**
 
-<img src="HairSalon/wwwroot/assets/images/eauclaire.png"          style="float: left; margin-right: 10px;" />
+<img src="Factory/wwwroot/assets/images/siteplan.png"          style="float: left; margin-right: 10px;" />
 
 ## Description
 A code review program for Epicodus school, which tracks the Engineers for Dr. Sneuss, the owner of his Factory. 
