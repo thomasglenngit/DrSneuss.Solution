@@ -1,0 +1,30 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Factory.Models;
+@model Factory.Models.Engineer;
+
+<h2>Engineer Details</h2>
+<hr />
+<h3>@Model.FirstName @Model.LastName</h3>
+<hr />
+<ul>
+@if (@Model.Machines.Count == 0)
+{
+  <p>This Engineer does not contain any machines.</p>
+}
+else
+{
+  <h4>Machines</h4>
+  @foreach(var join in Model.Machines)
+  {
+    <li>@Html.ActionLink($"{@join.Machine.Name}, {@join.Machine.Function}, {@join.Machine.ConstructionDate}", "Details", "Machines", new {id = join.MachineId})</li>
+  }
+  <hr />
+ 
+}
+<hr />
+<p>@Html.ActionLink("Back to Engineers", "Index")</p>
+<p>@Html.ActionLink("Edit Engineer", "Edit", new { id = Model.EngineerId })</p>
+<p>@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId })</p>
