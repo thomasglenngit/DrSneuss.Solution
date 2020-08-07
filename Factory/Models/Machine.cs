@@ -7,7 +7,7 @@ namespace Factory.Models
   {
     public Machine()
     {
-      this.Doctors = new HashSet<EngineerMachine>();
+      this.Engineers = new HashSet<EngineerMachine>();
     }
     public int MachineId { get; set; }
     public string Name { get; set; }
@@ -16,6 +16,6 @@ namespace Factory.Models
     
     public DateTime ConstructionDate { get; set; }
 
-    public ICollection<EngineerMachine> Doctors { get; }
+    public ICollection<EngineerMachine> Engineers { get; }
   }
 }
