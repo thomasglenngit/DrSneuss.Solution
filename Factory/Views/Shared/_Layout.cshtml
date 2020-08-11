@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <title>Factory</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/css/styles.css">
   </head>
   <body>
+    @Html.Partial("Navigation")
     <div class="container">
       <div id="header">
         <h1>Factory</h1>
@@ -14,11 +16,8 @@
       </div>
       <div class="main">
           @RenderBody()
-            <div class="" id="content">
-              <div id="feature">
-                
-              </div>
-          </div>
+          @Html.Partial("Footer")
+           
       </div>
     </div>
   </body>

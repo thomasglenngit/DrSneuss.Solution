@@ -3,19 +3,20 @@
 }
 
 @model Factory.Models.Engineer
-
-<h4>Hire a New Engineer</h4>
-@using (Html.BeginForm())
-{
-  <div class="form-group">
-    @Html.LabelFor(model => model.FirstName)
-    @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control", @required = true})
-  </div>
-  <div class="form-group">
-    @Html.LabelFor(model => model.LastName)
-    @Html.TextBoxFor(model => model.LastName, new { @class = "form-control", @required = true})
-  </div>
-  <input type="submit" value="Add new engineer" />
-}
-<p>@Html.ActionLink("Show all Engineers", "Index")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+<div class="sidebar">
+  <h4>Hire a New Engineer</h4>
+  @using (Html.BeginForm())
+  {
+    <div class="form-group">
+      @Html.LabelFor(model => model.FirstName)
+      @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control", @required = true})
+    </div>
+    <div class="form-group">
+      @Html.LabelFor(model => model.LastName)
+      @Html.TextBoxFor(model => model.LastName, new { @class = "form-control", @required = true})
+    </div>
+    <input type="submit" value="Add new engineer" />
+  }
+  <p>@Html.ActionLink("Show all Engineers", "Index")</p>
+  <p>@Html.ActionLink("Home", "Index", "Home")</p>
+</div>
