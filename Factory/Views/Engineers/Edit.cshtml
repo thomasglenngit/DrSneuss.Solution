@@ -4,24 +4,26 @@
 
 @model Factory.Models.Engineer
 
-<h2>Edit</h2>
+<div class="content">
 
-<h4>Edit this Engineer's Information: @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)</h4>
+  <h4>Edit this Engineer's Information: @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)</h4>
 
-@using (Html.BeginForm())
-{
-  @Html.HiddenFor(model => model.EngineerId)
-<div class="form-group">
-  @Html.LabelFor(model => model.FirstName)
-  @Html.EditorFor(model => model.FirstName, new { @class = "form-control", @required = true})
-</div>
+  @using (Html.BeginForm())
+  {
+    @Html.HiddenFor(model => model.EngineerId)
+  <div class="form-group">
+    @Html.LabelFor(model => model.FirstName)
+    @Html.EditorFor(model => model.FirstName, new { @class = "form-control", @required = true})
+  </div>
 
-<div class="form-group">
-  @Html.LabelFor(model => model.LastName)
-  @Html.EditorFor(model => model.LastName, new { @class = "form-control", @required = true})
-</div>
-  
+  <div class="form-group">
+    @Html.LabelFor(model => model.LastName)
+    @Html.EditorFor(model => model.LastName, new { @class = "form-control", @required = true})
+  </div>
+    
   <input type="submit" value="Save" />
   }
   <p>@Html.ActionLink("Back to Engineers List", "Index")</p>
   <p>@Html.ActionLink("Home", "Index", "Home")</p>
+
+</div>

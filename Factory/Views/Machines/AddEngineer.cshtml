@@ -4,19 +4,21 @@
 
 @model Factory.Models.Machine
 
-<h1>Designate an Engineer to Repair this Machine</h1>
-<hr />
-<h3>@Model.Name, @Model.Function, @Model.ConstructionDate</h3>
+<div class="content">
+  <h1>Designate an Engineer to Repair this Machine</h1>
+  <hr />
+  <h3>@Model.Name, @Model.Function, @Model.ConstructionDate</h3>
 
-@using (Html.BeginForm())
-{
-    @Html.HiddenFor(model => model.MachineId)
+  @using (Html.BeginForm())
+  {
+      @Html.HiddenFor(model => model.MachineId)
 
-    @Html.Label("Select Engineer")
-    @Html.DropDownList("EngineerId")
+      @Html.Label("Select Engineer")
+      @Html.DropDownList("EngineerId")
 
-    <input type="submit" value="Save" class="btn btn-primary" />
-}
+      <input type="submit" value="Save" class="btn btn-primary" />
+  }
 
-<p>@Html.ActionLink("Back to Machine List", "Index")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+  <p>@Html.ActionLink("Back to Machine List", "Index")</p>
+  <p>@Html.ActionLink("Home", "Index", "Home")</p>
+</div>

@@ -1,3 +1,8 @@
+.title {
+  text-decoration: underline;
+  font-style: italic;
+}
+
 body {
   color: rgb(9, 8, 8);
   background-image: url(http://getwallpapers.com/wallpaper/full/b/5/8/29887.jpg);
@@ -12,6 +17,8 @@ body {
   padding: 2%;
   background-color: rgba(245, 245, 245, 0.75);
   border-radius: 10px;
+  color: black;
+  font-size: x-large;
 }
 .nav {
   background-color: rgba(245, 245, 245, 0.75);
@@ -27,6 +34,7 @@ body {
   display: inline;
   letter-spacing: normal;
   word-spacing: 10px;
+  padding-left: 20px;
 }
 
 .nav a {

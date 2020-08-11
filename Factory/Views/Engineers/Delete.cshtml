@@ -3,14 +3,15 @@
 }
 
 @model Factory.Models.Engineer
+<div class="content">
+  <h2>Are You Sure You Want to Fire this Engineer?</h2>
 
-<h2>Are You Sure You Want to Fire this Engineer?</h2>
+  <p>@Model.FirstName @Model.LastName</p>
 
-<p>@Model.FirstName @Model.LastName</p>
-
-@using (Html.BeginForm())
-{
-    <input type="submit" value="Delete" />
-}
-<p>@Html.ActionLink("Back to engineers", "Index")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+  @using (Html.BeginForm())
+  {
+      <input type="submit" value="Delete" />
+  }
+  <p>@Html.ActionLink("Back to engineers", "Index")</p>
+  <p>@Html.ActionLink("Home", "Index", "Home")</p>
+</div>

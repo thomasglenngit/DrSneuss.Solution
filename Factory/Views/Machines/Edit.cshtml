@@ -4,29 +4,31 @@
 
 @using Factory.Models;
 @model Factory.Models.Machine;
+<div class="content"></div>
+  <h1>Edit Machine Details</h1>
+  <hr />
+  <h3>@Html.DisplayFor(model => @Model.Name), @Html.DisplayFor(model => @Model.Function)</h3></h3>
 
-<h1>Edit Machine Details</h1>
-<hr />
-<h3>@Html.DisplayFor(model => @Model.Name), @Html.DisplayFor(model => @Model.Function)</h3></h3>
+  @using (Html.BeginForm())
+  {
+    @Html.HiddenFor(model => model.MachineId)
+    <div class="form-group">
+      @Html.LabelFor(model => model.Name)
+      @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @required = true})
+    </div>
+    <div class="form-group">
+      @Html.LabelFor(model => model.Function)
+      @Html.TextBoxFor(model => model.Function, new { @class = "form-control", @required = true})
+    </div>
+    <div class="form-group">
+      @Html.LabelFor(model => model.ConstructionDate)
+      @Html.TextBoxFor(model => model.ConstructionDate, new { @class = "form-control", @type="date", @require = true})
+    </div>
+    <input type="submit" value="Edit Machine" class="btn btn-success" />
+  }
 
-@using (Html.BeginForm())
-{
-  @Html.HiddenFor(model => model.MachineId)
-  <div class="form-group">
-    @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @required = true})
-  </div>
-  <div class="form-group">
-    @Html.LabelFor(model => model.Function)
-    @Html.TextBoxFor(model => model.Function, new { @class = "form-control", @required = true})
-  </div>
-  <div class="form-group">
-    @Html.LabelFor(model => model.ConstructionDate)
-    @Html.TextBoxFor(model => model.ConstructionDate, new { @class = "form-control", @type="date", @require = true})
-  </div>
-  <input type="submit" value="Edit Machine" class="btn btn-success" />
-}
+  <hr />
+  <p>@Html.ActionLink("Back to Machine List", "Index")</p>
+  <p>@Html.ActionLink("Home", "Index", "Home")</p>
 
-<hr />
-<p>@Html.ActionLink("Back to Machine List", "Index")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+</div>
