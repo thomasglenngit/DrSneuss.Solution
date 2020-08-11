@@ -13,11 +13,10 @@
     <h3>Machines Have Not Yet Been Added</h3>
   }
 
-  <h3>Machines</h3>
   @foreach (Machine machine in Model)
   {
     <div class="Machine">
-      <p>@Html.ActionLink($"{machine.Name}, {machine.Function}", "Details", new { id = machine.MachineId})</p>
+      <p>@Html.ActionLink($"MACHINE NAME: {machine.Name}; FUNCTION: {machine.Function}", "Details", new { id = machine.MachineId})</p>
     </div>
   }
 

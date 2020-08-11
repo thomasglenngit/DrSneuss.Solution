@@ -50,24 +50,28 @@ body {
 
 }
 
+.content {
+  color: rgb(225, 118, 30);
+}
+
 h1 {
-  font-size: 80px;
+  font-size: 50px;
   color: black;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 h2 {
-  font-size: 80px;
+  font-size: 40px;
 }
 
 
 h3 {
-  font-size: 50px;
+  font-size: 25px;
   color: black;
 }
 
 h4 {
-  font-size: 40px;
+  font-size: 20px;
   color: black;
 }
 
