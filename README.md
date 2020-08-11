@@ -25,7 +25,7 @@ The following sitemap explains this database query relationship between "Enginee
 | The program will allow Dr. Sneuss to view lists of Machines with the Engineers licensed to repair them | "View Machines under this Engineer" | "Tony Stark -- Iron Man" |
 | The program will allow Dr. Sneuss to view lists of Engineers with the Machines they are licensed to repair| "View Engineers associated with this Machine" | "Iron Man -- Tony Stark" |
 | The program will allow Dr. Sneuss to edit entries | "Tony Stank" | "Tony Stark" |
-| The program will allow Dr. Sneuss to delete entries | "Tony Stark Smythe" | " " | 
+| The program will allow Dr. Sneuss to delete entries | "Tony Stark" | " " | 
 
 ## Known Bugs
 * No known bugs.   
