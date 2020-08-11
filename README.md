@@ -7,6 +7,8 @@
 ## Description
 A code review program for Epicodus school, which tracks the Engineers for Dr. Sneuss, the owner of his Factory. This project demonstrates many-to-many database relationships. 
 
+<img src="Factory/wwwroot/assets/images/FactoryPage.png" style = "floate: left; margin-right: 10px;" />
+
 The following sitemap explains this database query relationship between "Engineers" and the "Machines" they are authorized to repair.
 
 ## Database Structure
