@@ -81,6 +81,10 @@ Reopen the Navigator > Schemas tab. Right click and select Refresh All. Our new 
 #### Query
 The following is the query information for access this database on MySQL Workbench.
 ```
+  CREATE DATABASE `factory` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */;
+CREATE TABLE `__EFMigrationsHistory` (
+  `MigrationId` varchar(95) NOT NULL,
+  `ProductVersion` varchar(32) NOT NULL,
   PRIMARY KEY (`MigrationId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 CREATE TABLE `EngineerMachine` (
@@ -92,20 +96,20 @@ CREATE TABLE `EngineerMachine` (
   KEY `IX_EngineerMachine_MachineId` (`MachineId`),
   CONSTRAINT `FK_EngineerMachine_Engineers_EngineerId` FOREIGN KEY (`EngineerId`) REFERENCES `engineers` (`EngineerId`) ON DELETE CASCADE,
   CONSTRAINT `FK_EngineerMachine_Machines_MachineId` FOREIGN KEY (`MachineId`) REFERENCES `machines` (`MachineId`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 CREATE TABLE `Engineers` (
   `EngineerId` int(11) NOT NULL AUTO_INCREMENT,
   `FirstName` longtext,
   `LastName` longtext,
   PRIMARY KEY (`EngineerId`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 CREATE TABLE `Machines` (
   `MachineId` int(11) NOT NULL AUTO_INCREMENT,
   `Name` longtext,
   `Function` longtext,
   `ConstructionDate` datetime(6) NOT NULL,
   PRIMARY KEY (`MachineId`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 ```
 #### Entity
